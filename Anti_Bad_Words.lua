@@ -1,4 +1,10 @@
 words={"fuck","nigger","faggot","nier","senpai","niger","suck my"}
+
+if not game.ReplicatedStorage.DefaultChatSystemChatEvents:FindFirstChild("SayMessageRequest") then
+	warn("This game doesnt have roblox's chatting RemoteEvent.")
+	wait(9e9*9e9)
+end
+
 function _f(txt)
 	for i,v in next, words do
 		if txt:lower():match(v:lower()) then
