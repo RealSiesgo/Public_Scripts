@@ -1,7 +1,8 @@
 words={"fuck","nigger","faggot","nier","senpai","niger","suck my"}
 
-if not game.ReplicatedStorage.DefaultChatSystemChatEvents:FindFirstChild("SayMessageRequest") then
-	warn("This game doesnt have roblox's chatting RemoteEvent.")
+if (not game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")) or (not game.ReplicatedStorage.DefaultChatSystemChatEvents:FindFirstChild("SayMessageRequest")) then
+	warn("This game doesnt have roblox's chatting System.")
+	warn("Stopping script.")
 	wait(9e9*9e9)
 end
 
