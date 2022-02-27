@@ -35,7 +35,7 @@ local srv= game:GetService("RunService")
 fl=Instance.new('Folder',char);fl.Name='CWExtra'
 
 char.Archivable = true
-getgenv().reanim = char:Clone()
+reanim = char:Clone()
 reanim.Name='NexoPD'
 game.Players.LocalPlayer.Character=reanim
 
