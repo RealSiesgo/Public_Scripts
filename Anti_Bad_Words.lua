@@ -1,4 +1,5 @@
-words={"fuck","nigger","faggot","nier","senpai","niger","suck my"}
+--wrote this script in case yall get banned everytime for saying bad words like me too lmao
+words={"fuck","nigger","faggot","nier","niger","suck my","retard","retarded"}
 repeat wait(.5) until game:IsLoaded()
 if (not game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")) or (not game.ReplicatedStorage.DefaultChatSystemChatEvents:FindFirstChild("SayMessageRequest")) then
 	warn("This game doesnt have roblox's chatting System.")
