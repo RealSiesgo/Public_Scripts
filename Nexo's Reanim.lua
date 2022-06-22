@@ -1,5 +1,5 @@
 --I only changed it a lil
---Credits go to Nexo guy idk
+--Credits go to XeneonPlays lol
 --Original Script https://raw.githubusercontent.com/XeneonPlays/Nexo/main/NexoPD
 
 plr = game.Players.LocalPlayer
