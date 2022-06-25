@@ -4,7 +4,7 @@ repeat wait(.5) until game:IsLoaded()
 if (not game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")) or (not game.ReplicatedStorage.DefaultChatSystemChatEvents:FindFirstChild("SayMessageRequest")) then
 	warn("This game doesnt have roblox's chatting System.")
 	warn("Stopping script.")
-	wait(9e9*9e9)
+	return
 end
 
 function _f(txt)
