@@ -1,5 +1,6 @@
 --wrote this script in case yall get banned everytime for saying bad words like me too lmao
-words={"fu.k","suck my cock","n.gger","n.gga","faggot","nier","niger","suck my","retard","blowjob","bitch","hoe","cock","dick","osama","shit","anal","rape","fack","daddy","f.ck","ass"}
+local words={"fu.k","suck my cock","n.gger","n.gga","faggot","nier","niger","suck my","retard","blowjob","bitch","hoe","cock","dick","osama","shit","anal","rape","fack","daddy","f.ck","ass"}
+local mfstopthatshit = false
 repeat wait(.5) until game:IsLoaded()
 if (not game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")) or (not game.ReplicatedStorage.DefaultChatSystemChatEvents:FindFirstChild("SayMessageRequest")) then
 	warn("This game doesnt have roblox's chatting System.")
@@ -24,11 +25,16 @@ end
 hm=hookmetamethod(game,"__namecall",function(Self,...)
 	local args={...}
 	local ncm = getnamecallmethod()
-	if Self==game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest and ncm:lower()=="fireserver" and _f(args[1]) then
+	if Self==game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest and ncm:lower()=="fireserver" and _f(args[1]) and (not mfstopthatshit) then
 		local text=args[1]
 		for i,v in next, words do text=text:gsub(v,tagtext) end
 		return Self:FireServer(text,args[2])
 	end
 
 	return hm(Self,...)
+end)
+game:GetService("Players").LocalPlayer.Chatted:Connect(function(msg)
+	if msg:match("^/e stopword") then
+		mfstopthatshit = true
+	end
 end)
