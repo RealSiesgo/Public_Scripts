@@ -1,7 +1,7 @@
 --[[
 getgenv().SETTINGS={
-	["Notifications_Enabled"]=true
-	["Notifications_Duration"]=8
+	["Notifications_Enabled"]  = true;
+	["Notifications_Duration"] = 8;
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RealSiesgo/Public_Scripts/main/Anti_Chat_Hax.lua"))()
 ]]
