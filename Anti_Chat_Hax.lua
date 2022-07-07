@@ -14,7 +14,7 @@ mehook2=hookmetamethod(game:GetService("Players"),"__newindex",function(...)
 	if not checkcaller() and Self==chatbx and table.find(blacklisted,getcallingscript()) then
 		print("Blocked ChatHax.")
 		chatbx:ReleaseFocus()
-		return wait(9e9)
+		return error("Chat hax script stopped.")
 	end
 	return mehook2(...)
 end)
