@@ -3,7 +3,7 @@ getgenv().SETTINGS={
 	["Notifications_Enabled"]=true
 	["Notifications_Duration"]=8
 }
-loadstring(game:HttpGet(""))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RealSiesgo/Public_Scripts/main/Anti_Chat_Hax.lua"))()
 ]]
 repeat wait() until game:IsLoaded()
 local chatbx = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui",9e9).Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
