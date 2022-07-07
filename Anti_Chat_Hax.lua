@@ -19,6 +19,11 @@ if SETTINGS then
 		end
 	end
 end
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Anti-ChatHax Running.";
+	Text = if not notify_me then "Notifications Enabled: false" else "Notifications Enabled: true\nNotifications Duration: "..tostring(duration);
+	Duration = 6;
+})
 
 warn("MADE BY Siesgo#8832")
 
