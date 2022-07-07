@@ -15,13 +15,21 @@ if SETTINGS then
 		notify_me = true
 		if SETTINGS["Notifications_Duration"] then
 			duration = SETTINGS["Notifications_Duration"]
-			duration = if duration > 0 then duration else 3
+			if duration < 0 then
+				duration=3
+			end
 		end
 	end
 end
+local hatext
+if not notify_me then
+	hatext="Notifications Enabled: false"
+else
+	hatext="Notifications Enabled: true\nNotifications Duration: "..tostring(duration)
+end
 game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "Anti-ChatHax Running.";
-	Text = if not notify_me then "Notifications Enabled: false" else "Notifications Enabled: true\nNotifications Duration: "..tostring(duration);
+	Text = hatext;
 	Duration = 6;
 })
 
