@@ -13,9 +13,9 @@ local duration = 8
 if SETTINGS then
 	if SETTINGS["Notifications_Enabled"] then
 		notify_me = true
-	end
-	if SETTINGS["Notifications_Duration"] then
-		duration = SETTINGS["Notifications_Duration"]
+		if SETTINGS["Notifications_Duration"] then
+			duration = SETTINGS["Notifications_Duration"]
+		end
 	end
 end
 
