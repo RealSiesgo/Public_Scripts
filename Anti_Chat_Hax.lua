@@ -15,6 +15,7 @@ if SETTINGS then
 		notify_me = true
 		if SETTINGS["Notifications_Duration"] then
 			duration = SETTINGS["Notifications_Duration"]
+			duration = if duration > 0 then duration else 3
 		end
 	end
 end
@@ -26,7 +27,7 @@ function notify(txt)
 	game:GetService("StarterGui"):SetCore("SendNotification", {
 		Title = "Anti-ChatHax (BLOCKED MSG)";
 		Text = txt;
-		Duration = 7;
+		Duration = duration;
 	})
 end
 mehook1=hookmetamethod(game:GetService("Players"),"__namecall",function(...)
