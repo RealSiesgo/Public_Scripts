@@ -43,8 +43,8 @@ function notify(txt)
 		Duration = duration;
 	})
 end
-mehook1=hookmetamethod(game:GetService("Players"),"__namecall",function(...)
-	local Self=...
+mehook1=hookmetamethod(game,"__namecall",function(...)
+	local Self,arg=...
 	local ncm=getnamecallmethod()
 	local scr=getcallingscript()
 	if not checkcaller() and Self==chatbx and scr.Parent.Name~="PlayerScripts"and scr.Name~="ChatScript"and #scr:GetDescendants()~=16 then
@@ -57,6 +57,10 @@ mehook1=hookmetamethod(game:GetService("Players"),"__namecall",function(...)
 			--print("stopped",scr,"from releasing focus")
 			return
 		end
+	end
+	if not checkcaller() and ncm=="FireServer"and Self.Name=="SayMessageRequest" and (scr==nil or scr.ClassName~="ModuleScript"or scr.Parent.Name~="ChatScript"or scr.Parent.Parent.Name~="PlayerScripts") then
+		notify(arg)
+		return
 	end
 	return mehook1(...)
 end)
