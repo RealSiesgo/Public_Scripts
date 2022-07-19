@@ -6,7 +6,7 @@ getgenv().SETTINGS={
 loadstring(game:HttpGet("https://raw.githubusercontent.com/RealSiesgo/Public_Scripts/main/Anti_Chat_Hax.lua"))()
 ]]
 repeat wait() until game:IsLoaded()
-local chatbx = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui",9e9).Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+local chatbx = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui",9e9).Chat.Frame.ChatBarParentFrame.Frame.BoxFrame:WaitForChild("Frame",9e9):FindFirstChildWhichIsA("TextBox")
 local blacklisted = {}
 local notify_me = false
 local duration = 8
