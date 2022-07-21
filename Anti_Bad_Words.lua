@@ -1,5 +1,5 @@
 --wrote this script in case yall get banned everytime for saying bad words like me too lmao
-local words={"fu.k","suck my cock","n.gger","n.gga","faggot","nier","niger","suck my","blowjob","b.tch","hoe","cock","dick","osama","shit","anal","rape","f.ck","what the f.ck"}
+local words={"fu.k","suck my c.ck","n.gger","n.gga","faggot","nier","niger","su.k my","blowjob","b.tch","hoe","cock","d.ck","osama","shit","anal","rape","f.ck","w.at t.e f.c.","h.ck","exploit","gay","hacke.r","daddy","daddies","daddys","mommy","mommies","mommys"}
 local mfstopthatshit = false
 repeat wait(.5) until game:IsLoaded()
 if (not game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")) or (not game.ReplicatedStorage.DefaultChatSystemChatEvents:FindFirstChild("SayMessageRequest")) then
